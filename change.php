@@ -41,17 +41,17 @@ if (isset($_GET['item'])) {
 	<h1> To Do List </h1>
 	<div class="down-headline"> Labot </div>
 	<div class="to-do-list">
+		<form action="php/changing.php?item=<?php echo $item // apstrāde notiek changing.php  ar query string dodam zīmes id ?>" method="POST">
 		<?php foreach($notequery as $note): ?>
-			<form action="php/changing.php?item=<?php echo $item // apstrāde notiek changing.php  ar query string dodam zīmes id ?>" method="POST">
 				<label class="text-headline" > Virsraksts: </label><br />
 				<input class="name-input" type="text" name="name" value="<?php echo $note['name']; ?>" required/> <br />
 				<label class="text-headline" > Apraksts: </label><br />
 				<textarea class="meaning-input" name="meaning" maxlength="350" required><?php echo $note['meaning']; ?></textarea>
-			</form>
 		<?php endforeach; ?>
 			<a href="index.php"><div class="button begin-button">Doties atpakaļ</div></a>
 			<a href="php/deleting.php?item=<?php echo $item // zīmes dzēšana failā deleting.php ?>"><div class="button delete-button">Dzēst</div></a>
 			<input type="submit" value="Labot" class="button changebutton" />
+		</form>
 	</div>
 	
 
