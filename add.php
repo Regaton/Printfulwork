@@ -3,8 +3,8 @@
 <head>
 	<title>To Do List</title>
 	<!-- CSS -->
-	<link rel="stylesheet" href="css/style7.css" type="text/css" charset="utf-8" />
-	<link rel="stylesheet" href="css/adapt3.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="css/styles.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="css/media.css" type="text/css" charset="utf-8" />
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="js/"></script>
