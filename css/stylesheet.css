@@ -1,0 +1,120 @@
+/* Global */
+* {
+  box-sizing: border-box;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+	background-color:#2396e2;	
+  padding-top: 100px;
+  text-align: center;
+}
+
+body a {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 3.5em;
+}
+
+h2{
+  color: #fff;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.item{
+  width: 70%;
+  height: 200px;
+  margin-top: 70px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+
+.item-headline {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 2em;
+}
+
+.item-text {
+  text-align: left;
+  margin-top: 10px;
+  padding-left: 30px;
+  overflow-wrap: break-word;
+  height: 50px;
+}
+
+.item-date{
+  font-size: 1.5em;
+}
+
+
+.btn {
+  outline: none;
+  text-align: center;
+  background-color: #04125E;
+  border: 0;
+  height: 35px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-shadow: 1px 1px 1px #3f3f3f;
+}
+.done{
+  text-decoration: line-through;
+}
+
+.main-add-btn{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  float: right;
+  margin-right: 16%;
+}
+
+.form-block {
+  margin-top: 20px;
+  width: 60%;
+}
+
+.form-label {
+  font-size: 2em;
+}
+
+
+.form-control {
+  color: #000;
+}
+
+textarea.form-control {
+  height: 130px;
+  overflow-wrap: break-word; 
+  outline: none;
+  resize: none; 
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.change-btn, .delete-btn, .add-btn, .main-change-btn {
+  float: right;
+}
+
+.delete-btn {
+  margin-right: 30px;
+}
+
+.no-notes {
+  font-size: 3em;
+  margin-top: 50px;
+}

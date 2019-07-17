@@ -1,12 +1,11 @@
 <?php
 
-	require_once 'init.php'; // savienojums ar datu bāzi 
+	require_once 'init.php'; // savienojums ar failu, kur notiek savienošana ar datu bāzi 
 
 
 	if (isset($_GET['item'])) { //Ja GET (ar zīmes id) eksistē
-		$item = $_GET['item'];
-
-
+		$item = htmlspecialchars($_GET['item']);// Sagrajamies no XXS 
+  
 		$deleting = $db->prepare("
 			DELETE 
 			FROM items
@@ -17,7 +16,7 @@
 		$deleting->execute([
 			'item' => $item,
 			'user' => $_SESSION['user_id']
-		]); // izpild dzēšanu
+		]); // izpild dzēšanu, sargajamies no SQL injekcijas 
 
 	}
 

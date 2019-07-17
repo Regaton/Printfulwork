@@ -1,12 +1,12 @@
 <?php
 
  
-	require_once 'init.php'; // savienojums ar datu bāzi 
+	require_once 'init.php'; // savienojums ar failu, kur notiek savienošana ar datu bāzi 
 
 	if(isset($_GET['mark'], $_GET['item'])) { // ja GET (ar zīmes numuru un checkbox stāvokli) eksistē
 
-		$mark = $_GET['mark'];
-		$item = $_GET['item'];
+		$mark = htmlspecialchars($_GET['mark']);
+		$item =  htmlspecialchars($_GET['item']);
 
 
 
@@ -25,14 +25,14 @@
 				SET done=0
 				WHERE id=:itemid
 				AND user = :user
-			"); // izmaina uz neizpildīto
+			"); // izmaina uz neizpildīto, drošība no SQL injekcijas
 		}
 
 
 		$updatequery->execute([
 			'itemid' => $item,
 			'user' => $_SESSION['user_id']
-		]); // izpilda gatavu izmaiņu
+		]); // izpilda gatavu izmaiņu, sargajamies no SQL injekcijas
 
 	}
 
